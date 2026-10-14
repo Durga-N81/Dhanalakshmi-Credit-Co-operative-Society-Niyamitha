@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Font classes according to language */
+  body.lang-kn {
+    font-family: 'Noto Sans Kannada', system-ui, sans-serif;
+  }
+  body.lang-te {
+    font-family: 'Noto Sans Telugu', system-ui, sans-serif;
+  }
+  body.lang-en {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Custom print styles for printable documents like Promissory Note & Application Slip */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .printable-card {
+    box-shadow: none !important;
+    border: 1px solid #111 !important;
+    margin: 0 !important;
+    padding: 16px !important;
+  }
+}
